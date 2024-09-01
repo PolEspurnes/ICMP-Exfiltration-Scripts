@@ -4,7 +4,7 @@ from scapy.all import *
 import base64
 import argparse
 import sys
-import pdb
+
 
 def check_args():
     parser = argparse.ArgumentParser("Ping Exfiltration Capturer 0.1\n")
