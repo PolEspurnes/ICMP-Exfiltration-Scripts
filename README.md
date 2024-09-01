@@ -16,15 +16,15 @@ Malicious actors can use ICMP (Internet Control Message Protocol) to exfiltrate 
 
 ICMP packets include an optional "Data" field of variable length, which can be used to transmit arbitrary information.
 
-![ICMP Packet Structure](images/ICMP Exfiltration.png)
+![ICMP Packet Structure](images/ICMP-Exfiltration.png)
 
 By default, if an ICMP echo request originates from a standard Windows ping, the data field will look something like this:
 
-![Windows ICMP Data Field](ICMP Exfiltration-1.png)
+![Windows ICMP Data Field](images/ICMP-Exfiltration-1.png)
 
 However, if the request comes from a Linux system, the data field might look like this:
 
-![Linux ICMP Data Field](ICMP Exfiltration-2.png)
+![Linux ICMP Data Field](images/ICMP-Exfiltration-2.png)
 
 ### Modifying the Data Field
 
@@ -40,9 +40,9 @@ There are system tools available that allow us to write arbitrary information in
 
   This command sends the specified hexadecimal byte sequence to the target IP address.
 
-  ![Linux Ping Command Example](ICMP Exfiltration-3.png)
+  ![Linux Ping Command Example](images/ICMP-Exfiltration-3.png)
 
-  ![Linux Ping Data Field Example](ICMP Exfiltration-4.png)
+  ![Linux Ping Data Field Example](images/ICMP-Exfiltration-4.png)
 
 #### *Windows*
 
