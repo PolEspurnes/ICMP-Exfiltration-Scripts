@@ -16,7 +16,7 @@ Malicious actors can use ICMP (Internet Control Message Protocol) to exfiltrate 
 
 ICMP packets include an optional "Data" field of variable length, which can be used to transmit arbitrary information.
 
-![ICMP Packet Structure](ICMP Exfiltration.png)
+![ICMP Packet Structure](images/ICMP Exfiltration.png)
 
 By default, if an ICMP echo request originates from a standard Windows ping, the data field will look something like this:
 
